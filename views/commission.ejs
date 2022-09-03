@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href="assets/css/main.css">
+        <title>Commission Form</title>
+    </head>
+    <body class="is-preload commissionbody">
+
+        
+		<div id="commissionwrapper">
+				<header id="header">
+					<h1><a href="/">Tal Thatcher - Web Development Solutions</a></h1>
+					<nav class="links">
+						<ul>
+							<li><a href="#about">About Me</a></li>
+							<li><a href="#develop">Website Development Information</a></li>
+							<li><a href="#portfolio">My Portfolio</a></li>
+							<li><a href="#">Commission a Website</a></li>
+						</ul>
+					</nav>
+				
+				</header>
+			<!-- Main -->
+				<div id="main">
+					<!-- Post -->
+					<article class="post">
+						<% if(commission !=  undefined) { %>
+							<% if(commission !==1){ %>
+								<header>
+									<div class="title">
+										<h2>Submit your commission request below and I will contact you within two business days.</h2>
+										<p>Upon contact we'll discuss your website's design, look, and functionality and get all the details taken 	care of.</p>		
+									</div>				
+								</header>
+							<% } else {%>
+								<header class = "noBorder">
+									<div class="title">
+										<h2>Commission request sent. I will contact you using the provided information as soon as possible to discuss the details and prepare a detailed proposal for what you need.</p>		
+									</div>				
+								</header>
+								<%}%>
+
+							<%if(commission !== 1){%>
+								<div id="about">
+								    <h2>Commission Form</h2>			
+								    <form id = "commissioninfo" method="post" action="/commission/submit">
+                        		        <fieldset>
+                        		            <label for="name">Name</label>
+                        		            <input form="commissioninfo" type ="text" id="name" name ="name">
+                        		        </fieldset>
+                        		        <fieldset>
+                        		            <label for="phone">Phone Number</label>
+                        		            <input form="commissioninfo"  type ="tel" id="name" name = "phone">
+                        		        </fieldset>
+                        		        <fieldset>
+                        		           <label for = "email">Email</label>
+                        		           <input form="commissioninfo"  type = "email" id = "email" name = 'email'>
+                        		        </fieldset>
+                        		        <fieldset>
+                        		            <label for="descripton">A short description of the website you would like built.</label>
+                        		            <textarea form="commissioninfo" name="description" id="description" class = "siteDescription">What kind 	of 	website do you want?</textarea>
+                        		    </form>
+									<form >
+										<fieldset class = "footerinput">
+											<button form ="commissioninfo" type = "submit" class = "button large" id="submit">Submit</button>
+										</fieldset>
+									</form>
+								</div>
+							<%}%>
+						<% } else{ %>
+							<header class = "noBorder">
+									<h2>It appears that your browser is blocking cookies. I use them here to help prevent this form from being spammed by bots. Please enable cookies for this site and refresh the page.</h2>		
+							</header>
+						<% }%>
+					</article>
+				</div>
+			<!-- Sidebar -->
+	
+					</section>
+				</div>
+				
+					<!-- Footer -->
+					<footer id="footer" class = "bottomfooter">
+						<ul class="icons">
+							<li><a href="https://twitter.com/Tal_Thatcher"class="icon brands fa-twitter"><spanclass="label">Twitter</span></a></li>
+							<li><a href="https://github.com/TalThatcher"class="github"><span class = "label">GitHub<span></a></li>
+							<li>
+								<a href="https://www.linkedin.com/intal-thatcher234/" class="linkedin"><span class = "label">Linkedin</span></a>
+							
+							</li>
+							
+						</ul>
+						<p class="copyright">&copy; Future Imperfect: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</footer >	
+				<script src = "assets/js/commission.js"></script>
+	</body>
+</html>
