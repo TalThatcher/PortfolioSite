@@ -15,6 +15,7 @@ transporter = nodemailer.createTransport({
 
 module.exports ={
 
+    //if no commission property is detected, create it and set to 0 (allowed to make commission request)
     getCommission: (req,res)=>{
         if(req.session.commission === undefined){
             req.session.commission = 0;
@@ -23,10 +24,14 @@ module.exports ={
         res.render(path.resolve(__dirname+"/../"+"views/commission.ejs"),{commission:commissionStatus})
     },
     sendRequest: (req,res)=>{
+        let formValidate = false;
         if(req.session.commission === 1){
             res.redirect("/");
         }
-        else{
+        else {
+        
+        }
+        if(formValidate === true){
         req.session.commission = 1;
         let message = {
             from: process.env.NODEMAILER_USER,

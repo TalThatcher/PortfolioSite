@@ -40,6 +40,43 @@ div article .noBorder{
 	margin: 1em 0 1em 0;
 	height:15em;
 }
+.commissionStatus{
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	margin-top:1rem;
+}
+.LED{
+	margin-bottom:0;
+}
+.greenLED::before{
+
+		  background-color: #94E185;
+		  border-color: #78D965;
+		  box-shadow: 0px 0px 4rem 1px #94E185;
+		  content: ' ';
+		  display: inline-block;
+		  width: 2rem;
+		  height: 2rem;
+		  margin-right: 10px;
+		  border: 1px solid #000;
+		  border-radius: 2rem;
+		
+}
+.redLED::before{
+
+	background-color: #dc1d1d;
+	border-color: #78D965;
+	box-shadow: 0px 0px 4px 1px #dc1d1d;
+	content: ' ';
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	margin-right: .5rem;
+	border: 1px solid #000;
+	border-radius: 2rem;
+  
+}
 .requestSent{
 	height:35em;
 	width:100%;
@@ -3136,7 +3173,10 @@ input, select, textarea {
 	section.special, article.special {
 		text-align: center;
 	}
-
+	.visiblePara{
+		font-size:.9rem;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+	}
 	header p {
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 0.7em;

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const session = require('express-session');
+const port = process.env.PORT || 3000;
 
 const mainRoutes = require('./routes/main');
 const commissionRoutes=require('./routes/commission');
@@ -28,7 +29,7 @@ app.use(express.urlencoded({extended:true}))
 app.use("/", mainRoutes);
 app.use("/commission", commissionRoutes)
 
-app.listen(process.env.PORT, ()=>{
-    console.log('Server running on port 9000')
+app.listen(port, ()=>{
+    console.log('Server running on port ' + port)
 })
 

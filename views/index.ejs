@@ -34,7 +34,7 @@
 								<header>
 									<div class="title">
 										<h2>Tal Thatcher - Software Engineer. Your Web Development Solution.</h2>
-										<p>I build sleek, responsive websites, servers, and fullstack applications on commission.</p>
+										<p class = "visiblePara">I build sleek, responsive websites, servers, and fullstack applications on commission.</p>
 										<p>		
 									</div>				
 								</header>
@@ -85,6 +85,17 @@
 									<h2>Commission Your Web Development Solution Today!</h2>
 									<a class="button large" href ="/commission">Submit a commission here</a>
 								</header>
+								<% if(status == "false") {%>
+									<section class = "commissionStatus">										
+										<p class = "redLED LED"></p>
+										<span>Commissions Closed</span>
+									</section>
+									<%} else{%>
+										<section class = "commissionStatus">
+											<p class = "greenLED LED"></p>
+											<span>Commissions open</span>
+										</section>
+									<%}%>
 							</section>
 
 						<!-- Mini Posts -->
